@@ -1,0 +1,236 @@
+{
+  "source_files": {
+    "paragraph": "data\\paragraph.txt",
+    "questions": "data/question.txt"
+  },
+  "constants_by_type": {
+    "actors": [
+      "google",
+      "user",
+      "users",
+      "you"
+    ],
+    "contexts": [
+      "account",
+      "app",
+      "apps",
+      "browser",
+      "browsers",
+      "controls",
+      "device",
+      "devices",
+      "services",
+      "settings",
+      "google account",
+      "privacy controls"
+    ],
+    "data_types": [
+      "content",
+      "data",
+      "identifiers",
+      "information",
+      "ip address",
+      "personal information",
+      "unique identifier",
+      "unique identifiers"
+    ],
+    "technologies": [
+      "cookies",
+      "logs",
+      "server logs"
+    ],
+    "purposes": [
+      "abuse",
+      "communicate",
+      "deliver",
+      "fraud",
+      "improve",
+      "keep",
+      "maintain",
+      "personalize",
+      "preferences",
+      "protect",
+      "provide",
+      "security"
+    ],
+    "retention": [
+      "auto-delete",
+      "delete"
+    ],
+    "reasons": [
+      "business",
+      "legal",
+      "legal needs"
+    ],
+    "other": [
+      "about",
+      "accessible",
+      "across",
+      "add",
+      "address",
+      "addresses",
+      "ads",
+      "against",
+      "allow",
+      "also",
+      "and",
+      "are",
+      "associated",
+      "auto",
+      "based",
+      "become",
+      "can",
+      "choose",
+      "collect",
+      "collected",
+      "collects",
+      "comments",
+      "create",
+      "date",
+      "deletion",
+      "depending",
+      "details",
+      "develop",
+      "different",
+      "documents",
+      "does",
+      "email",
+      "emails",
+      "engines",
+      "explains",
+      "features",
+      "for",
+      "have",
+      "how",
+      "including",
+      "intended",
+      "interaction",
+      "its",
+      "kept",
+      "kinds",
+      "like",
+      "longer",
+      "manage",
+      "many",
+      "may",
+      "name",
+      "needs",
+      "not",
+      "number",
+      "options",
+      "order",
+      "other",
+      "password",
+      "payment",
+      "periods",
+      "personal",
+      "phone",
+      "photos",
+      "policy",
+      "privacy",
+      "privately",
+      "publicly",
+      "receive",
+      "referrer",
+      "request",
+      "retains",
+      "risks",
+      "search",
+      "server",
+      "sessions",
+      "share",
+      "shared",
+      "signed",
+      "some",
+      "specific",
+      "store",
+      "such",
+      "technical",
+      "technologies",
+      "that",
+      "the",
+      "their",
+      "them",
+      "this",
+      "through",
+      "time",
+      "under",
+      "unique",
+      "upload",
+      "url",
+      "use",
+      "used",
+      "uses",
+      "using",
+      "vary",
+      "way",
+      "what",
+      "when",
+      "which",
+      "while",
+      "who",
+      "why",
+      "with",
+      "working",
+      "your",
+      "privacy policy"
+    ]
+  },
+  "predicates": [
+    {
+      "name": "collects",
+      "arity": 2,
+      "template": "collects(Actor, DataType)"
+    },
+    {
+      "name": "collects_content",
+      "arity": 2,
+      "template": "collects_content(Actor, ContentType)"
+    },
+    {
+      "name": "collects_tech_data",
+      "arity": 2,
+      "template": "collects_tech_data(Actor, TechDataType)"
+    },
+    {
+      "name": "uses_technology",
+      "arity": 2,
+      "template": "uses_technology(Actor, Technology)"
+    },
+    {
+      "name": "uses_for",
+      "arity": 2,
+      "template": "uses_for(Actor, Purpose)"
+    },
+    {
+      "name": "purpose",
+      "arity": 3,
+      "template": "purpose(Actor, DataType, Purpose)"
+    },
+    {
+      "name": "varies_by",
+      "arity": 2,
+      "template": "varies_by(Process, Factor)  % e.g., varies_by(data_collection, privacy_controls)"
+    },
+    {
+      "name": "stores_under_identifier",
+      "arity": 4,
+      "template": "stores_under_identifier(Actor, IdentifierType, Context, Purpose)"
+    },
+    {
+      "name": "retains",
+      "arity": 3,
+      "template": "retains(Actor, DataType, RetentionPolicy)"
+    },
+    {
+      "name": "allows_setting",
+      "arity": 2,
+      "template": "allows_setting(Actor, SettingAction)  % e.g., delete/auto_delete"
+    },
+    {
+      "name": "may_keep_longer_for",
+      "arity": 3,
+      "template": "may_keep_longer_for(Actor, DataType, Reason)"
+    }
+  ]
+}
