@@ -1,0 +1,8 @@
+{
+  "method": "MFS Baseline (WordNet first synset)",
+  "dataset": "reference_annotations.csv",
+  "accuracy": 0.7683,
+  "correct": 63,
+  "total": 82,
+  "accuracy_display": "76.83% (63/82)"
+}

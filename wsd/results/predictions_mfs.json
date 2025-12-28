@@ -1,0 +1,578 @@
+{
+  "predictions": [
+    {
+      "lemma": "privacy",
+      "pos": "n",
+      "reference": "privacy.n.01",
+      "mfs": "privacy.n.01",
+      "match": true
+    },
+    {
+      "lemma": "policy",
+      "pos": "n",
+      "reference": "policy.n.02",
+      "mfs": "policy.n.01",
+      "match": false
+    },
+    {
+      "lemma": "explain",
+      "pos": "v",
+      "reference": "explain.v.01",
+      "mfs": "explain.v.01",
+      "match": true
+    },
+    {
+      "lemma": "information",
+      "pos": "n",
+      "reference": "information.n.01",
+      "mfs": "information.n.01",
+      "match": true
+    },
+    {
+      "lemma": "google",
+      "pos": "n",
+      "reference": "google.n.01",
+      "mfs": "google.n.01",
+      "match": true
+    },
+    {
+      "lemma": "collect",
+      "pos": "v",
+      "reference": "collect.v.01",
+      "mfs": "roll_up.v.02",
+      "match": false
+    },
+    {
+      "lemma": "use",
+      "pos": "v",
+      "reference": "use.v.01",
+      "mfs": "use.v.01",
+      "match": true
+    },
+    {
+      "lemma": "service",
+      "pos": "n",
+      "reference": "service.n.01",
+      "mfs": "service.n.01",
+      "match": true
+    },
+    {
+      "lemma": "data",
+      "pos": "n",
+      "reference": "data.n.01",
+      "mfs": "data.n.01",
+      "match": true
+    },
+    {
+      "lemma": "vary",
+      "pos": "v",
+      "reference": "vary.v.01",
+      "mfs": "change.v.03",
+      "match": false
+    },
+    {
+      "lemma": "control",
+      "pos": "n",
+      "reference": "control.n.01",
+      "mfs": "control.n.01",
+      "match": true
+    },
+    {
+      "lemma": "choose",
+      "pos": "v",
+      "reference": "choose.v.01",
+      "mfs": "choose.v.01",
+      "match": true
+    },
+    {
+      "lemma": "sign",
+      "pos": "v",
+      "reference": "sign.v.01",
+      "mfs": "sign.v.01",
+      "match": true
+    },
+    {
+      "lemma": "store",
+      "pos": "v",
+      "reference": "store.v.01",
+      "mfs": "store.v.01",
+      "match": true
+    },
+    {
+      "lemma": "identifier",
+      "pos": "n",
+      "reference": "identifier.n.01",
+      "mfs": "identifier.n.01",
+      "match": true
+    },
+    {
+      "lemma": "associate",
+      "pos": "v",
+      "reference": "associate.v.01",
+      "mfs": "associate.v.01",
+      "match": true
+    },
+    {
+      "lemma": "browser",
+      "pos": "n",
+      "reference": "browser.n.01",
+      "mfs": "browser.n.01",
+      "match": true
+    },
+    {
+      "lemma": "app",
+      "pos": "n",
+      "reference": "application.n.01",
+      "mfs": null,
+      "match": false
+    },
+    {
+      "lemma": "device",
+      "pos": "n",
+      "reference": "device.n.01",
+      "mfs": "device.n.01",
+      "match": true
+    },
+    {
+      "lemma": "maintain",
+      "pos": "v",
+      "reference": "maintain.v.01",
+      "mfs": "keep.v.01",
+      "match": false
+    },
+    {
+      "lemma": "preference",
+      "pos": "n",
+      "reference": "preference.n.02",
+      "mfs": "preference.n.01",
+      "match": false
+    },
+    {
+      "lemma": "session",
+      "pos": "n",
+      "reference": "session.n.01",
+      "mfs": "session.n.01",
+      "match": true
+    },
+    {
+      "lemma": "create",
+      "pos": "v",
+      "reference": "create.v.01",
+      "mfs": "make.v.03",
+      "match": false
+    },
+    {
+      "lemma": "account",
+      "pos": "n",
+      "reference": "account.n.01",
+      "mfs": "history.n.02",
+      "match": false
+    },
+    {
+      "lemma": "provide",
+      "pos": "v",
+      "reference": "provide.v.01",
+      "mfs": "supply.v.01",
+      "match": false
+    },
+    {
+      "lemma": "personal",
+      "pos": "a",
+      "reference": "personal.a.01",
+      "mfs": "personal.a.01",
+      "match": true
+    },
+    {
+      "lemma": "name",
+      "pos": "n",
+      "reference": "name.n.01",
+      "mfs": "name.n.01",
+      "match": true
+    },
+    {
+      "lemma": "password",
+      "pos": "n",
+      "reference": "password.n.01",
+      "mfs": "password.n.01",
+      "match": true
+    },
+    {
+      "lemma": "add",
+      "pos": "v",
+      "reference": "add.v.01",
+      "mfs": "add.v.01",
+      "match": true
+    },
+    {
+      "lemma": "detail",
+      "pos": "n",
+      "reference": "detail.n.01",
+      "mfs": "detail.n.01",
+      "match": true
+    },
+    {
+      "lemma": "phone",
+      "pos": "n",
+      "reference": "telephone.n.01",
+      "mfs": "telephone.n.01",
+      "match": true
+    },
+    {
+      "lemma": "number",
+      "pos": "n",
+      "reference": "number.n.02",
+      "mfs": "number.n.01",
+      "match": false
+    },
+    {
+      "lemma": "payment",
+      "pos": "n",
+      "reference": "payment.n.01",
+      "mfs": "payment.n.01",
+      "match": true
+    },
+    {
+      "lemma": "content",
+      "pos": "n",
+      "reference": "content.n.05",
+      "mfs": "content.n.01",
+      "match": false
+    },
+    {
+      "lemma": "upload",
+      "pos": "v",
+      "reference": "upload.v.01",
+      "mfs": "upload.v.01",
+      "match": true
+    },
+    {
+      "lemma": "receive",
+      "pos": "v",
+      "reference": "receive.v.01",
+      "mfs": "receive.v.01",
+      "match": true
+    },
+    {
+      "lemma": "email",
+      "pos": "n",
+      "reference": "electronic_mail.n.01",
+      "mfs": "electronic_mail.n.01",
+      "match": true
+    },
+    {
+      "lemma": "photo",
+      "pos": "n",
+      "reference": "photograph.n.01",
+      "mfs": "photograph.n.01",
+      "match": true
+    },
+    {
+      "lemma": "document",
+      "pos": "n",
+      "reference": "document.n.01",
+      "mfs": "document.n.01",
+      "match": true
+    },
+    {
+      "lemma": "comment",
+      "pos": "n",
+      "reference": "comment.n.01",
+      "mfs": "remark.n.01",
+      "match": false
+    },
+    {
+      "lemma": "technical",
+      "pos": "a",
+      "reference": "technical.a.01",
+      "mfs": "technical.a.01",
+      "match": true
+    },
+    {
+      "lemma": "interaction",
+      "pos": "n",
+      "reference": "interaction.n.01",
+      "mfs": "interaction.n.01",
+      "match": true
+    },
+    {
+      "lemma": "address",
+      "pos": "n",
+      "reference": "address.n.01",
+      "mfs": "address.n.01",
+      "match": true
+    },
+    {
+      "lemma": "date",
+      "pos": "n",
+      "reference": "date.n.01",
+      "mfs": "date.n.01",
+      "match": true
+    },
+    {
+      "lemma": "time",
+      "pos": "n",
+      "reference": "time.n.01",
+      "mfs": "time.n.01",
+      "match": true
+    },
+    {
+      "lemma": "referrer",
+      "pos": "n",
+      "reference": "referrer.n.01",
+      "mfs": null,
+      "match": false
+    },
+    {
+      "lemma": "url",
+      "pos": "n",
+      "reference": "uniform_resource_locator.n.01",
+      "mfs": "url.n.01",
+      "match": false
+    },
+    {
+      "lemma": "technology",
+      "pos": "n",
+      "reference": "technology.n.01",
+      "mfs": "technology.n.01",
+      "match": true
+    },
+    {
+      "lemma": "cookie",
+      "pos": "n",
+      "reference": "cookie.n.01",
+      "mfs": "cookie.n.01",
+      "match": true
+    },
+    {
+      "lemma": "log",
+      "pos": "n",
+      "reference": "log.n.01",
+      "mfs": "log.n.01",
+      "match": true
+    },
+    {
+      "lemma": "deliver",
+      "pos": "v",
+      "reference": "deliver.v.01",
+      "mfs": "deliver.v.01",
+      "match": true
+    },
+    {
+      "lemma": "keep",
+      "pos": "v",
+      "reference": "keep.v.01",
+      "mfs": "keep.v.01",
+      "match": true
+    },
+    {
+      "lemma": "work",
+      "pos": "v",
+      "reference": "work.v.02",
+      "mfs": "work.v.01",
+      "match": false
+    },
+    {
+      "lemma": "improve",
+      "pos": "v",
+      "reference": "better.v.01",
+      "mfs": "better.v.02",
+      "match": false
+    },
+    {
+      "lemma": "develop",
+      "pos": "v",
+      "reference": "develop.v.01",
+      "mfs": "develop.v.01",
+      "match": true
+    },
+    {
+      "lemma": "feature",
+      "pos": "n",
+      "reference": "feature.n.01",
+      "mfs": "feature.n.01",
+      "match": true
+    },
+    {
+      "lemma": "personalize",
+      "pos": "v",
+      "reference": "personalize.v.01",
+      "mfs": "personalize.v.01",
+      "match": true
+    },
+    {
+      "lemma": "ad",
+      "pos": "n",
+      "reference": "ad.n.01",
+      "mfs": "ad.n.01",
+      "match": true
+    },
+    {
+      "lemma": "depend",
+      "pos": "v",
+      "reference": "depend.v.01",
+      "mfs": "depend.v.01",
+      "match": true
+    },
+    {
+      "lemma": "setting",
+      "pos": "n",
+      "reference": "setting.n.01",
+      "mfs": "setting.n.01",
+      "match": true
+    },
+    {
+      "lemma": "communicate",
+      "pos": "v",
+      "reference": "communicate.v.01",
+      "mfs": "communicate.v.01",
+      "match": true
+    },
+    {
+      "lemma": "user",
+      "pos": "n",
+      "reference": "user.n.01",
+      "mfs": "user.n.01",
+      "match": true
+    },
+    {
+      "lemma": "protect",
+      "pos": "v",
+      "reference": "protect.v.01",
+      "mfs": "protect.v.01",
+      "match": true
+    },
+    {
+      "lemma": "fraud",
+      "pos": "n",
+      "reference": "fraud.n.01",
+      "mfs": "fraud.n.01",
+      "match": true
+    },
+    {
+      "lemma": "abuse",
+      "pos": "n",
+      "reference": "abuse.n.01",
+      "mfs": "maltreatment.n.01",
+      "match": false
+    },
+    {
+      "lemma": "security",
+      "pos": "n",
+      "reference": "security.n.01",
+      "mfs": "security.n.01",
+      "match": true
+    },
+    {
+      "lemma": "risk",
+      "pos": "n",
+      "reference": "risk.n.01",
+      "mfs": "hazard.n.01",
+      "match": false
+    },
+    {
+      "lemma": "allow",
+      "pos": "v",
+      "reference": "let.v.01",
+      "mfs": "let.v.01",
+      "match": true
+    },
+    {
+      "lemma": "share",
+      "pos": "v",
+      "reference": "share.v.01",
+      "mfs": "share.v.01",
+      "match": true
+    },
+    {
+      "lemma": "publicly",
+      "pos": "r",
+      "reference": "publicly.r.01",
+      "mfs": "publicly.r.01",
+      "match": true
+    },
+    {
+      "lemma": "privately",
+      "pos": "r",
+      "reference": "privately.r.01",
+      "mfs": "privately.r.01",
+      "match": true
+    },
+    {
+      "lemma": "accessible",
+      "pos": "a",
+      "reference": "accessible.a.01",
+      "mfs": "accessible.a.01",
+      "match": true
+    },
+    {
+      "lemma": "search",
+      "pos": "n",
+      "reference": "search.n.01",
+      "mfs": "search.n.01",
+      "match": true
+    },
+    {
+      "lemma": "engine",
+      "pos": "n",
+      "reference": "engine.n.01",
+      "mfs": "engine.n.01",
+      "match": true
+    },
+    {
+      "lemma": "retain",
+      "pos": "v",
+      "reference": "retain.v.01",
+      "mfs": "retain.v.01",
+      "match": true
+    },
+    {
+      "lemma": "kind",
+      "pos": "n",
+      "reference": "kind.n.01",
+      "mfs": "kind.n.01",
+      "match": true
+    },
+    {
+      "lemma": "period",
+      "pos": "n",
+      "reference": "period.n.01",
+      "mfs": "time_period.n.01",
+      "match": false
+    },
+    {
+      "lemma": "option",
+      "pos": "n",
+      "reference": "option.n.01",
+      "mfs": "option.n.01",
+      "match": true
+    },
+    {
+      "lemma": "delete",
+      "pos": "v",
+      "reference": "delete.v.01",
+      "mfs": "delete.v.01",
+      "match": true
+    },
+    {
+      "lemma": "legal",
+      "pos": "a",
+      "reference": "legal.a.01",
+      "mfs": "legal.a.01",
+      "match": true
+    },
+    {
+      "lemma": "need",
+      "pos": "n",
+      "reference": "need.n.01",
+      "mfs": "need.n.01",
+      "match": true
+    },
+    {
+      "lemma": "business",
+      "pos": "n",
+      "reference": "business.n.01",
+      "mfs": "business.n.01",
+      "match": true
+    }
+  ]
+}

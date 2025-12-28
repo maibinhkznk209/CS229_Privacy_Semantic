@@ -1,0 +1,664 @@
+{
+  "model_name": "bert-base-uncased",
+  "method": "BERT + SVM trained on SemCor",
+  "n_models_available": 2419,
+  "n_targets": 82,
+  "predictions": [
+    {
+      "lemma": "privacy",
+      "pos": "n",
+      "mfs": "privacy.n.01",
+      "model": "privacy.n.01",
+      "reference": "privacy.n.01",
+      "has_model": false
+    },
+    {
+      "lemma": "policy",
+      "pos": "n",
+      "mfs": "policy.n.01",
+      "model": "policy.n.01",
+      "reference": "policy.n.02",
+      "has_model": true
+    },
+    {
+      "lemma": "explain",
+      "pos": "v",
+      "mfs": "explain.v.01",
+      "model": "explain.v.01",
+      "reference": "explain.v.01",
+      "has_model": true
+    },
+    {
+      "lemma": "information",
+      "pos": "n",
+      "mfs": "information.n.01",
+      "model": "information.n.01",
+      "reference": "information.n.01",
+      "has_model": true
+    },
+    {
+      "lemma": "google",
+      "pos": "n",
+      "mfs": "google.n.01",
+      "model": "google.n.01",
+      "reference": "google.n.01",
+      "has_model": false
+    },
+    {
+      "lemma": "collect",
+      "pos": "v",
+      "mfs": "roll_up.v.02",
+      "model": "collect.v.02",
+      "reference": "collect.v.01",
+      "has_model": true
+    },
+    {
+      "lemma": "use",
+      "pos": "v",
+      "mfs": "use.v.01",
+      "model": "use.v.01",
+      "reference": "use.v.01",
+      "has_model": true
+    },
+    {
+      "lemma": "service",
+      "pos": "n",
+      "mfs": "service.n.01",
+      "model": "service.n.01",
+      "reference": "service.n.01",
+      "has_model": true
+    },
+    {
+      "lemma": "data",
+      "pos": "n",
+      "mfs": "data.n.01",
+      "model": "data.n.01",
+      "reference": "data.n.01",
+      "has_model": false
+    },
+    {
+      "lemma": "vary",
+      "pos": "v",
+      "mfs": "change.v.03",
+      "model": "change.v.03",
+      "reference": "vary.v.01",
+      "has_model": true
+    },
+    {
+      "lemma": "control",
+      "pos": "n",
+      "mfs": "control.n.01",
+      "model": "control.n.05",
+      "reference": "control.n.01",
+      "has_model": true
+    },
+    {
+      "lemma": "choose",
+      "pos": "v",
+      "mfs": "choose.v.01",
+      "model": "choose.v.01",
+      "reference": "choose.v.01",
+      "has_model": true
+    },
+    {
+      "lemma": "sign",
+      "pos": "v",
+      "mfs": "sign.v.01",
+      "model": "sign.v.01",
+      "reference": "sign.v.01",
+      "has_model": true
+    },
+    {
+      "lemma": "store",
+      "pos": "v",
+      "mfs": "store.v.01",
+      "model": "store.v.01",
+      "reference": "store.v.01",
+      "has_model": true
+    },
+    {
+      "lemma": "identifier",
+      "pos": "n",
+      "mfs": "identifier.n.01",
+      "model": "identifier.n.01",
+      "reference": "identifier.n.01",
+      "has_model": false
+    },
+    {
+      "lemma": "associate",
+      "pos": "v",
+      "mfs": "associate.v.01",
+      "model": "associate.v.01",
+      "reference": "associate.v.01",
+      "has_model": true
+    },
+    {
+      "lemma": "browser",
+      "pos": "n",
+      "mfs": "browser.n.01",
+      "model": "browser.n.01",
+      "reference": "browser.n.01",
+      "has_model": false
+    },
+    {
+      "lemma": "app",
+      "pos": "n",
+      "mfs": null,
+      "model": null,
+      "reference": "application.n.01",
+      "has_model": false
+    },
+    {
+      "lemma": "device",
+      "pos": "n",
+      "mfs": "device.n.01",
+      "model": "device.n.01",
+      "reference": "device.n.01",
+      "has_model": true
+    },
+    {
+      "lemma": "maintain",
+      "pos": "v",
+      "mfs": "keep.v.01",
+      "model": "keep.v.01",
+      "reference": "maintain.v.01",
+      "has_model": true
+    },
+    {
+      "lemma": "preference",
+      "pos": "n",
+      "mfs": "preference.n.01",
+      "model": "preference.n.01",
+      "reference": "preference.n.02",
+      "has_model": false
+    },
+    {
+      "lemma": "session",
+      "pos": "n",
+      "mfs": "session.n.01",
+      "model": "session.n.03",
+      "reference": "session.n.01",
+      "has_model": true
+    },
+    {
+      "lemma": "create",
+      "pos": "v",
+      "mfs": "make.v.03",
+      "model": "make.v.03",
+      "reference": "create.v.01",
+      "has_model": true
+    },
+    {
+      "lemma": "account",
+      "pos": "n",
+      "mfs": "history.n.02",
+      "model": "account.n.03",
+      "reference": "account.n.01",
+      "has_model": true
+    },
+    {
+      "lemma": "provide",
+      "pos": "v",
+      "mfs": "supply.v.01",
+      "model": "supply.v.01",
+      "reference": "provide.v.01",
+      "has_model": true
+    },
+    {
+      "lemma": "personal",
+      "pos": "a",
+      "mfs": "personal.a.01",
+      "model": "personal.a.01",
+      "reference": "personal.a.01",
+      "has_model": true
+    },
+    {
+      "lemma": "name",
+      "pos": "n",
+      "mfs": "name.n.01",
+      "model": "name.n.01",
+      "reference": "name.n.01",
+      "has_model": true
+    },
+    {
+      "lemma": "password",
+      "pos": "n",
+      "mfs": "password.n.01",
+      "model": "password.n.01",
+      "reference": "password.n.01",
+      "has_model": false
+    },
+    {
+      "lemma": "add",
+      "pos": "v",
+      "mfs": "add.v.01",
+      "model": "add.v.01",
+      "reference": "add.v.01",
+      "has_model": true
+    },
+    {
+      "lemma": "detail",
+      "pos": "n",
+      "mfs": "detail.n.01",
+      "model": "detail.n.01",
+      "reference": "detail.n.01",
+      "has_model": true
+    },
+    {
+      "lemma": "phone",
+      "pos": "n",
+      "mfs": "telephone.n.01",
+      "model": "telephone.n.01",
+      "reference": "telephone.n.01",
+      "has_model": false
+    },
+    {
+      "lemma": "number",
+      "pos": "n",
+      "mfs": "number.n.01",
+      "model": "number.n.01",
+      "reference": "number.n.02",
+      "has_model": true
+    },
+    {
+      "lemma": "payment",
+      "pos": "n",
+      "mfs": "payment.n.01",
+      "model": "payment.n.02",
+      "reference": "payment.n.01",
+      "has_model": true
+    },
+    {
+      "lemma": "content",
+      "pos": "n",
+      "mfs": "content.n.01",
+      "model": "content.n.01",
+      "reference": "content.n.05",
+      "has_model": true
+    },
+    {
+      "lemma": "upload",
+      "pos": "v",
+      "mfs": "upload.v.01",
+      "model": "upload.v.01",
+      "reference": "upload.v.01",
+      "has_model": false
+    },
+    {
+      "lemma": "receive",
+      "pos": "v",
+      "mfs": "receive.v.01",
+      "model": "receive.v.01",
+      "reference": "receive.v.01",
+      "has_model": true
+    },
+    {
+      "lemma": "email",
+      "pos": "n",
+      "mfs": "electronic_mail.n.01",
+      "model": "electronic_mail.n.01",
+      "reference": "electronic_mail.n.01",
+      "has_model": false
+    },
+    {
+      "lemma": "photo",
+      "pos": "n",
+      "mfs": "photograph.n.01",
+      "model": "photograph.n.01",
+      "reference": "photograph.n.01",
+      "has_model": false
+    },
+    {
+      "lemma": "document",
+      "pos": "n",
+      "mfs": "document.n.01",
+      "model": "document.n.01",
+      "reference": "document.n.01",
+      "has_model": false
+    },
+    {
+      "lemma": "comment",
+      "pos": "n",
+      "mfs": "remark.n.01",
+      "model": "remark.n.01",
+      "reference": "comment.n.01",
+      "has_model": true
+    },
+    {
+      "lemma": "technical",
+      "pos": "a",
+      "mfs": "technical.a.01",
+      "model": "technical.a.02",
+      "reference": "technical.a.01",
+      "has_model": true
+    },
+    {
+      "lemma": "interaction",
+      "pos": "n",
+      "mfs": "interaction.n.01",
+      "model": "interaction.n.01",
+      "reference": "interaction.n.01",
+      "has_model": false
+    },
+    {
+      "lemma": "address",
+      "pos": "n",
+      "mfs": "address.n.01",
+      "model": "address.n.01",
+      "reference": "address.n.01",
+      "has_model": true
+    },
+    {
+      "lemma": "date",
+      "pos": "n",
+      "mfs": "date.n.01",
+      "model": "date.n.01",
+      "reference": "date.n.01",
+      "has_model": true
+    },
+    {
+      "lemma": "time",
+      "pos": "n",
+      "mfs": "time.n.01",
+      "model": "time.n.01",
+      "reference": "time.n.01",
+      "has_model": true
+    },
+    {
+      "lemma": "referrer",
+      "pos": "n",
+      "mfs": null,
+      "model": null,
+      "reference": "referrer.n.01",
+      "has_model": false
+    },
+    {
+      "lemma": "url",
+      "pos": "n",
+      "mfs": "url.n.01",
+      "model": "url.n.01",
+      "reference": "uniform_resource_locator.n.01",
+      "has_model": false
+    },
+    {
+      "lemma": "technology",
+      "pos": "n",
+      "mfs": "technology.n.01",
+      "model": "technology.n.01",
+      "reference": "technology.n.01",
+      "has_model": true
+    },
+    {
+      "lemma": "cookie",
+      "pos": "n",
+      "mfs": "cookie.n.01",
+      "model": "cookie.n.01",
+      "reference": "cookie.n.01",
+      "has_model": false
+    },
+    {
+      "lemma": "log",
+      "pos": "n",
+      "mfs": "log.n.01",
+      "model": "log.n.01",
+      "reference": "log.n.01",
+      "has_model": false
+    },
+    {
+      "lemma": "deliver",
+      "pos": "v",
+      "mfs": "deliver.v.01",
+      "model": "deliver.v.02",
+      "reference": "deliver.v.01",
+      "has_model": true
+    },
+    {
+      "lemma": "keep",
+      "pos": "v",
+      "mfs": "keep.v.01",
+      "model": "continue.v.01",
+      "reference": "keep.v.01",
+      "has_model": true
+    },
+    {
+      "lemma": "work",
+      "pos": "v",
+      "mfs": "work.v.01",
+      "model": "function.v.01",
+      "reference": "work.v.02",
+      "has_model": true
+    },
+    {
+      "lemma": "improve",
+      "pos": "v",
+      "mfs": "better.v.02",
+      "model": "better.v.02",
+      "reference": "better.v.01",
+      "has_model": true
+    },
+    {
+      "lemma": "develop",
+      "pos": "v",
+      "mfs": "develop.v.01",
+      "model": "develop.v.01",
+      "reference": "develop.v.01",
+      "has_model": true
+    },
+    {
+      "lemma": "feature",
+      "pos": "n",
+      "mfs": "feature.n.01",
+      "model": "feature.n.01",
+      "reference": "feature.n.01",
+      "has_model": true
+    },
+    {
+      "lemma": "personalize",
+      "pos": "v",
+      "mfs": "personalize.v.01",
+      "model": "personalize.v.01",
+      "reference": "personalize.v.01",
+      "has_model": false
+    },
+    {
+      "lemma": "ad",
+      "pos": "n",
+      "mfs": "ad.n.01",
+      "model": "ad.n.01",
+      "reference": "ad.n.01",
+      "has_model": false
+    },
+    {
+      "lemma": "depend",
+      "pos": "v",
+      "mfs": "depend.v.01",
+      "model": "depend.v.01",
+      "reference": "depend.v.01",
+      "has_model": false
+    },
+    {
+      "lemma": "setting",
+      "pos": "n",
+      "mfs": "setting.n.01",
+      "model": "setting.n.02",
+      "reference": "setting.n.01",
+      "has_model": true
+    },
+    {
+      "lemma": "communicate",
+      "pos": "v",
+      "mfs": "communicate.v.01",
+      "model": "communicate.v.01",
+      "reference": "communicate.v.01",
+      "has_model": true
+    },
+    {
+      "lemma": "user",
+      "pos": "n",
+      "mfs": "user.n.01",
+      "model": "user.n.01",
+      "reference": "user.n.01",
+      "has_model": false
+    },
+    {
+      "lemma": "protect",
+      "pos": "v",
+      "mfs": "protect.v.01",
+      "model": "protect.v.01",
+      "reference": "protect.v.01",
+      "has_model": true
+    },
+    {
+      "lemma": "fraud",
+      "pos": "n",
+      "mfs": "fraud.n.01",
+      "model": "fraud.n.01",
+      "reference": "fraud.n.01",
+      "has_model": false
+    },
+    {
+      "lemma": "abuse",
+      "pos": "n",
+      "mfs": "maltreatment.n.01",
+      "model": "maltreatment.n.01",
+      "reference": "abuse.n.01",
+      "has_model": false
+    },
+    {
+      "lemma": "security",
+      "pos": "n",
+      "mfs": "security.n.01",
+      "model": "security.n.01",
+      "reference": "security.n.01",
+      "has_model": true
+    },
+    {
+      "lemma": "risk",
+      "pos": "n",
+      "mfs": "hazard.n.01",
+      "model": "hazard.n.01",
+      "reference": "risk.n.01",
+      "has_model": false
+    },
+    {
+      "lemma": "allow",
+      "pos": "v",
+      "mfs": "let.v.01",
+      "model": "let.v.01",
+      "reference": "let.v.01",
+      "has_model": true
+    },
+    {
+      "lemma": "share",
+      "pos": "v",
+      "mfs": "share.v.01",
+      "model": "share.v.02",
+      "reference": "share.v.01",
+      "has_model": true
+    },
+    {
+      "lemma": "publicly",
+      "pos": "r",
+      "mfs": "publicly.r.01",
+      "model": "publicly.r.01",
+      "reference": "publicly.r.01",
+      "has_model": false
+    },
+    {
+      "lemma": "privately",
+      "pos": "r",
+      "mfs": "privately.r.01",
+      "model": "privately.r.01",
+      "reference": "privately.r.01",
+      "has_model": false
+    },
+    {
+      "lemma": "accessible",
+      "pos": "a",
+      "mfs": "accessible.a.01",
+      "model": "accessible.a.01",
+      "reference": "accessible.a.01",
+      "has_model": false
+    },
+    {
+      "lemma": "search",
+      "pos": "n",
+      "mfs": "search.n.01",
+      "model": "search.n.01",
+      "reference": "search.n.01",
+      "has_model": true
+    },
+    {
+      "lemma": "engine",
+      "pos": "n",
+      "mfs": "engine.n.01",
+      "model": "engine.n.01",
+      "reference": "engine.n.01",
+      "has_model": true
+    },
+    {
+      "lemma": "retain",
+      "pos": "v",
+      "mfs": "retain.v.01",
+      "model": "retain.v.01",
+      "reference": "retain.v.01",
+      "has_model": false
+    },
+    {
+      "lemma": "kind",
+      "pos": "n",
+      "mfs": "kind.n.01",
+      "model": "kind.n.01",
+      "reference": "kind.n.01",
+      "has_model": false
+    },
+    {
+      "lemma": "period",
+      "pos": "n",
+      "mfs": "time_period.n.01",
+      "model": "time_period.n.01",
+      "reference": "period.n.01",
+      "has_model": true
+    },
+    {
+      "lemma": "option",
+      "pos": "n",
+      "mfs": "option.n.01",
+      "model": "option.n.01",
+      "reference": "option.n.01",
+      "has_model": false
+    },
+    {
+      "lemma": "delete",
+      "pos": "v",
+      "mfs": "delete.v.01",
+      "model": "delete.v.01",
+      "reference": "delete.v.01",
+      "has_model": false
+    },
+    {
+      "lemma": "legal",
+      "pos": "a",
+      "mfs": "legal.a.01",
+      "model": "legal.a.01",
+      "reference": "legal.a.01",
+      "has_model": true
+    },
+    {
+      "lemma": "need",
+      "pos": "n",
+      "mfs": "need.n.01",
+      "model": "need.n.01",
+      "reference": "need.n.01",
+      "has_model": true
+    },
+    {
+      "lemma": "business",
+      "pos": "n",
+      "mfs": "business.n.01",
+      "model": "business.n.01",
+      "reference": "business.n.01",
+      "has_model": true
+    }
+  ]
+}

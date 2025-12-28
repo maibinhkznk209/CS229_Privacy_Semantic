@@ -14,7 +14,7 @@ import nltk
 from nltk.corpus import wordnet as wn
 
 ROOT = Path(__file__).resolve().parents[1]
-PRED_PATH = ROOT / "wsd" / "predictions.json"
+PRED_PATH = ROOT / "wsd" / "results" / "predictions_bert_semcor.json"
 OUT_PATH = ROOT / "kb" / "kb_aug.pl"
 
 
