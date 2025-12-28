@@ -1,4 +1,4 @@
-% Auto-generated vocabulary (Step 2)
+% Auto-generated vocabulary
 % Entities (constants) by type
 entity_type(google, actors).
 entity_type(user, actors).

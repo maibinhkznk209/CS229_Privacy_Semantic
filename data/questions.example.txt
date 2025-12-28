@@ -1,0 +1,8 @@
+Q1 What information does Google collect when you use its services?
+Q2 Why does Google collect this information?
+Q3 Does the data Google collects depend on your privacy controls?
+Q4 When you are not signed in, does Google store data under unique identifiers?
+Q5 What information do you provide when you create a Google Account?
+Q6 Does Google collect content you create or upload (e.g., emails, photos, documents)?
+Q7 What technologies does Google use to collect technical data (cookies or server logs)?
+Q8 How long does Google keep data, and can users delete or auto-delete it?

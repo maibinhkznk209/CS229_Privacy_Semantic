@@ -1,4 +1,4 @@
-# Step 2 – FOL Vocabulary & Predicate Schema
+# FOL Vocabulary & Predicate Schema
 
 ## Constants / Terms by Category
 

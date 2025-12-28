@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-Step 2 (Project 2): Build First-Order Logic (FOL) vocabulary + schema from a paragraph (privacy policy).
+Build First-Order Logic (FOL) vocabulary + schema from a paragraph (privacy policy).
 Inputs:
   - paragraph.txt (required)
   - questions.txt (optional)
@@ -69,7 +69,6 @@ CATEGORY_KEYWORDS: Dict[str, List[str]] = {
 }
 
 # --------- 3) Predicate schema templates ----------
-# You can keep them general; later you will instantiate facts/rules in Step 4.
 DEFAULT_PREDICATES: List[Tuple[str, int, str]] = [
     ("collects", 2, "collects(Actor, DataType)"),
     ("collects_content", 2, "collects_content(Actor, ContentType)"),
@@ -201,7 +200,7 @@ def write_md(out_path: Path, vocab: dict) -> None:
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
     lines: List[str] = []
-    lines.append("# Step 2 – FOL Vocabulary & Predicate Schema\n")
+    lines.append("FOL Vocabulary & Predicate Schema\n")
 
     lines.append("## Constants / Terms by Category\n")
     for cat, items in vocab["constants_by_type"].items():
@@ -225,7 +224,7 @@ def write_prolog(out_path: Path, vocab: dict) -> None:
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
     lines: List[str] = []
-    lines.append("% Auto-generated vocabulary (Step 2)")
+    lines.append("% Auto-generated vocabulary")
     lines.append("% Entities (constants) by type")
     for cat, items in vocab["constants_by_type"].items():
         prolog_cat = cat.lower()
