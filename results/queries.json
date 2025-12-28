@@ -1,0 +1,50 @@
+[
+  {
+    "qid": "Q1",
+    "question": "What information does Google collect when you use its services?",
+    "prolog_query": "collects(google, X).",
+    "answer_shape": "X (all collected data types)"
+  },
+  {
+    "qid": "Q2",
+    "question": "Why does Google collect this information?",
+    "prolog_query": "uses_for(google, Purpose).",
+    "answer_shape": "Purpose (all purposes)"
+  },
+  {
+    "qid": "Q3",
+    "question": "Does the data Google collects depend on your privacy controls?",
+    "prolog_query": "varies_by(data_collection, privacy_controls).",
+    "answer_shape": "true/false"
+  },
+  {
+    "qid": "Q4",
+    "question": "When you are not signed in, does Google store data under unique identifiers?",
+    "prolog_query": "stores_under_identifier(google, unique_identifier, not_signed_in, Purpose).",
+    "answer_shape": "Purpose"
+  },
+  {
+    "qid": "Q5",
+    "question": "What information do you provide when you create a Google Account?",
+    "prolog_query": "purpose(google, personal_information, create_or_use_account).",
+    "answer_shape": "true/false"
+  },
+  {
+    "qid": "Q6",
+    "question": "Does Google collect content you create or upload (e.g., emails, photos, documents)?",
+    "prolog_query": "collects_content(google, X).",
+    "answer_shape": "X (content type)"
+  },
+  {
+    "qid": "Q7",
+    "question": "What technologies does Google use to collect technical data (cookies or server logs)?",
+    "prolog_query": "uses_technology(google, Tech).",
+    "answer_shape": "Tech"
+  },
+  {
+    "qid": "Q8",
+    "question": "How long does Google keep data, and can users delete or auto-delete it?",
+    "prolog_query": "retains(google, data, Policy), allows_setting(google, delete), (allows_setting(google, auto_delete) ; true).",
+    "answer_shape": "Policy + delete/auto-delete availability"
+  }
+]

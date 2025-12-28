@@ -1,4 +1,4 @@
-# FOL Vocabulary & Predicate Schema
+FOL Vocabulary & Predicate Schema
 
 ## Constants / Terms by Category
 
@@ -74,7 +74,6 @@
 - `across`
 - `add`
 - `address`
-- `addresses`
 - `ads`
 - `against`
 - `allow`
@@ -87,20 +86,16 @@
 - `become`
 - `can`
 - `choose`
-- `collect`
 - `collected`
 - `collects`
 - `comments`
 - `create`
 - `date`
-- `deletion`
 - `depending`
 - `details`
 - `develop`
 - `different`
 - `documents`
-- `does`
-- `email`
 - `emails`
 - `engines`
 - `explains`
@@ -138,7 +133,6 @@
 - `publicly`
 - `receive`
 - `referrer`
-- `request`
 - `retains`
 - `risks`
 - `search`
@@ -155,7 +149,6 @@
 - `technologies`
 - `that`
 - `the`
-- `their`
 - `them`
 - `this`
 - `through`
@@ -174,7 +167,6 @@
 - `when`
 - `which`
 - `while`
-- `who`
 - `why`
 - `with`
 - `working`

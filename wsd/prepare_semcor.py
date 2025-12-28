@@ -18,7 +18,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-from typing import List
+from typing import Iterable, List
 
 import nltk
 from nltk.corpus import semcor
@@ -35,7 +35,17 @@ def main() -> None:
     n_written = 0
     with OUT.open("w", encoding="utf-8") as f:
         for sent in semcor.tagged_sents(tag="sem"):
-            words = [w.lower() for w in sent.leaves() if isinstance(w, str)]
+            # SemCor sentence types vary across NLTK versions; normalize to word list.
+            if hasattr(sent, "leaves"):
+                tokens: Iterable = sent.leaves()
+            elif hasattr(sent, "words"):
+                tokens = sent.words()
+            elif hasattr(sent, "tokens"):
+                tokens = sent.tokens
+            else:
+                tokens = sent
+
+            words = [w.lower() for w in tokens if isinstance(w, str)]
             for node in sent:
                 if not hasattr(node, "label"):
                     continue

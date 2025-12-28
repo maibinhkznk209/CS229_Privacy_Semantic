@@ -1,7 +1,7 @@
 {
   "source_files": {
-    "paragraph": "data\\paragraph.txt",
-    "questions": "data/question.txt"
+    "paragraph": "C:\\Users\\thanh\\OneDrive\\C_Illuminismo\\Computational Semantic\\Project\\data\\paragraph.txt",
+    "questions": null
   },
   "constants_by_type": {
     "actors": [
@@ -68,7 +68,6 @@
       "across",
       "add",
       "address",
-      "addresses",
       "ads",
       "against",
       "allow",
@@ -81,20 +80,16 @@
       "become",
       "can",
       "choose",
-      "collect",
       "collected",
       "collects",
       "comments",
       "create",
       "date",
-      "deletion",
       "depending",
       "details",
       "develop",
       "different",
       "documents",
-      "does",
-      "email",
       "emails",
       "engines",
       "explains",
@@ -132,7 +127,6 @@
       "publicly",
       "receive",
       "referrer",
-      "request",
       "retains",
       "risks",
       "search",
@@ -149,7 +143,6 @@
       "technologies",
       "that",
       "the",
-      "their",
       "them",
       "this",
       "through",
@@ -168,7 +161,6 @@
       "when",
       "which",
       "while",
-      "who",
       "why",
       "with",
       "working",

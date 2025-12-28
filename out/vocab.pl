@@ -49,7 +49,6 @@ entity_type(accessible, other).
 entity_type(across, other).
 entity_type(add, other).
 entity_type(address, other).
-entity_type(addresses, other).
 entity_type(ads, other).
 entity_type(against, other).
 entity_type(allow, other).
@@ -62,20 +61,16 @@ entity_type(based, other).
 entity_type(become, other).
 entity_type(can, other).
 entity_type(choose, other).
-entity_type(collect, other).
 entity_type(collected, other).
 entity_type(collects, other).
 entity_type(comments, other).
 entity_type(create, other).
 entity_type(date, other).
-entity_type(deletion, other).
 entity_type(depending, other).
 entity_type(details, other).
 entity_type(develop, other).
 entity_type(different, other).
 entity_type(documents, other).
-entity_type(does, other).
-entity_type(email, other).
 entity_type(emails, other).
 entity_type(engines, other).
 entity_type(explains, other).
@@ -113,7 +108,6 @@ entity_type(privately, other).
 entity_type(publicly, other).
 entity_type(receive, other).
 entity_type(referrer, other).
-entity_type(request, other).
 entity_type(retains, other).
 entity_type(risks, other).
 entity_type(search, other).
@@ -130,7 +124,6 @@ entity_type(technical, other).
 entity_type(technologies, other).
 entity_type(that, other).
 entity_type(the, other).
-entity_type(their, other).
 entity_type(them, other).
 entity_type(this, other).
 entity_type(through, other).
@@ -149,7 +142,6 @@ entity_type(what, other).
 entity_type(when, other).
 entity_type(which, other).
 entity_type(while, other).
-entity_type(who, other).
 entity_type(why, other).
 entity_type(with, other).
 entity_type(working, other).

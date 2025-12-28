@@ -87,27 +87,40 @@ def write_outputs(items: List[Dict]) -> None:
 
     pl_lines = [
         "% queries.pl (auto-generated)",
-        ":- initialization(main).",
+        ":- initialization(main, main).",
         "",
         "main :-",
-        "  consult('../kb/kb.pl'),",
+        "  consult('kb/kb.pl'),",
         "  format('Loaded KB.~n', []),",
-        "  run_all,",
-        "  halt.",
+        "  run_all.",
         "",
         "run_all :-",
     ]
 
+    var_pattern = re.compile(r"\b[A-Z][A-Za-z0-9_]*\b")
+
     for it in items:
         qid = it["qid"]
-        q = it["prolog_query"]
+        q = it["prolog_query"].strip().rstrip(".")
         if q.strip().startswith("% TODO"):
             pl_lines.append(f"  format('~n[{qid}] TODO mapping.~n', []),")
             continue
 
+        vars_in_query = sorted(set(var_pattern.findall(q)))
+        var_map = {v: f"{v}_{qid}" for v in vars_in_query}
+        for v, vq in var_map.items():
+            q = re.sub(rf"\b{re.escape(v)}\b", vq, q)
+
+        answer_var = var_map[vars_in_query[0]] if vars_in_query else None
+        xs_var = f"Xs_{qid}"
+
         pl_lines.append(f"  format('~n[{qid}] {it['question']}~n', []),")
-        pl_lines.append(f"  ( findall(X, ({q}), Xs), Xs \\= [] -> format('  Answers: ~w~n', [Xs])")
-        pl_lines.append(f"  ; ( call(({q})) -> format('  true.~n', []) ; format('  false / no answers.~n', []) ) ),")
+        if answer_var:
+            pl_lines.append(f"  ( findall({answer_var}, ({q}), {xs_var}), {xs_var} \\= []")
+            pl_lines.append(f"  -> format('  Answers: ~w~n', [{xs_var}])")
+            pl_lines.append("  ; format('  false / no answers.~n', []) ),")
+        else:
+            pl_lines.append(f"  ( call(({q})) -> format('  true.~n', []) ; format('  false / no answers.~n', []) ),")
 
     pl_lines.append("  true.")
     OUT_PL.write_text("\n".join(pl_lines) + "\n", encoding="utf-8")
