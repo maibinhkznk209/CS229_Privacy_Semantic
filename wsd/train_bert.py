@@ -126,7 +126,7 @@ def train_per_lemma_models(grouped_data, tokenizer, model, device):
         
         # Train SVM
         try:
-            clf = LinearSVC(random_state=42, max_iter=1000)
+            clf = LinearSVC(random_state=42, max_iter=5000)
             clf.fit(X_train, y_train)
         except Exception as e:
             print(f"  Warning: Failed to train {key}: {e}")
