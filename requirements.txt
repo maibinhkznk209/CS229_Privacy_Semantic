@@ -1,3 +1,8 @@
+# If you use a different CUDA version, replace cu121 in the extra-index-url.
+--extra-index-url https://download.pytorch.org/whl/cu121
 nltk>=3.8
 scikit-learn>=1.3
 joblib>=1.3
+numpy>=1.26
+transformers>=4.39
+torch>=2.1
