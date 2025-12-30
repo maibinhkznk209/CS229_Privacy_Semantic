@@ -13,9 +13,10 @@ from __future__ import annotations
 import csv
 import json
 from pathlib import Path
-from typing import Optional
+from typing import Optional, List
 
 from nltk.corpus import wordnet as wn
+from sklearn.metrics import precision_score, recall_score, f1_score
 
 # Paths - updated for new folder structure
 SCRIPT_DIR = Path(__file__).parent
@@ -54,6 +55,23 @@ def normalize_synset(synset_name: str) -> str:
     return synset_name.lower()
 
 
+def calculate_metrics(y_true: List[str], y_pred: List[str]) -> dict:
+    """Calculate precision, recall, F1 metrics."""
+    # Filter out empty predictions
+    valid_indices = [i for i in range(len(y_true)) if y_true[i] and y_pred[i]]
+    y_true_valid = [y_true[i] for i in valid_indices]
+    y_pred_valid = [y_pred[i] for i in valid_indices]
+    
+    if not y_true_valid:
+        return {"precision_macro": 0, "recall_macro": 0, "f1_weighted": 0}
+    
+    return {
+        "precision_macro": round(precision_score(y_true_valid, y_pred_valid, average='macro', zero_division=0), 4),
+        "recall_macro": round(recall_score(y_true_valid, y_pred_valid, average='macro', zero_division=0), 4),
+        "f1_weighted": round(f1_score(y_true_valid, y_pred_valid, average='weighted', zero_division=0), 4),
+    }
+
+
 def main() -> None:
     if not REF_PATH.exists():
         raise FileNotFoundError(f"Missing {REF_PATH}. Please ensure reference_annotations.csv exists.")
@@ -75,6 +93,8 @@ def main() -> None:
     
     # Run MFS predictions
     predictions = []
+    y_true = []
+    y_pred = []
     correct = 0
     total = 0
     
@@ -94,6 +114,8 @@ def main() -> None:
         
         if ref_norm:
             total += 1
+            y_true.append(ref_norm)
+            y_pred.append(mfs_norm)
             if match:
                 correct += 1
         
@@ -106,6 +128,7 @@ def main() -> None:
         })
     
     acc = correct / total if total else 0.0
+    metrics = calculate_metrics(y_true, y_pred)
     
     # Save results
     results = {
@@ -114,6 +137,9 @@ def main() -> None:
         "accuracy": round(acc, 4),
         "correct": correct,
         "total": total,
+        "precision_macro": metrics["precision_macro"],
+        "recall_macro": metrics["recall_macro"],
+        "f1_weighted": metrics["f1_weighted"],
         "accuracy_display": f"{acc:.2%} ({correct}/{total})"
     }
     
@@ -127,9 +153,13 @@ def main() -> None:
     print(f"\n[RESULTS]")
     print(f"  Dataset: reference_annotations.csv ({total} tokens)")
     print(f"  Accuracy: {acc:.2%} ({correct}/{total})")
+    print(f"  Precision (macro): {metrics['precision_macro']:.4f}")
+    print(f"  Recall (macro): {metrics['recall_macro']:.4f}")
+    print(f"  F1 (weighted): {metrics['f1_weighted']:.4f}")
     print(f"\n[OK] Saved: {OUT_PATH}")
     print(f"[OK] Saved: {PREDICTIONS_OUT}")
 
 
 if __name__ == "__main__":
     main()
+

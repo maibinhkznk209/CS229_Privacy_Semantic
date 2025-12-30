@@ -13,13 +13,14 @@ from __future__ import annotations
 import csv
 import json
 from pathlib import Path
-from typing import Optional
+from typing import Optional, List
 
 import torch
 import numpy as np
 import joblib
 from transformers import AutoTokenizer, AutoModel
 from nltk.corpus import wordnet as wn
+from sklearn.metrics import precision_score, recall_score, f1_score
 
 # Paths
 SCRIPT_DIR = Path(__file__).parent
@@ -68,6 +69,22 @@ def normalize_synset(synset_name: str) -> str:
         except:
             return synset_name.lower()
     return synset_name.lower()
+
+
+def calculate_metrics(y_true: List[str], y_pred: List[str]) -> dict:
+    """Calculate precision, recall, F1 metrics."""
+    valid_indices = [i for i in range(len(y_true)) if y_true[i] and y_pred[i]]
+    y_true_valid = [y_true[i] for i in valid_indices]
+    y_pred_valid = [y_pred[i] for i in valid_indices]
+    
+    if not y_true_valid:
+        return {"precision_macro": 0, "recall_macro": 0, "f1_weighted": 0}
+    
+    return {
+        "precision_macro": round(precision_score(y_true_valid, y_pred_valid, average='macro', zero_division=0), 4),
+        "recall_macro": round(recall_score(y_true_valid, y_pred_valid, average='macro', zero_division=0), 4),
+        "f1_weighted": round(f1_score(y_true_valid, y_pred_valid, average='weighted', zero_division=0), 4),
+    }
 
 
 def main() -> None:
@@ -122,6 +139,8 @@ def main() -> None:
     
     # Run predictions
     predictions = []
+    y_true = []
+    y_pred = []
     correct = 0
     correct_mfs = 0
     total = 0
@@ -158,6 +177,8 @@ def main() -> None:
         
         if ref_norm:
             total += 1
+            y_true.append(ref_norm)
+            y_pred.append(pred_norm)
             if match:
                 correct += 1
             if mfs_match:
@@ -180,6 +201,7 @@ def main() -> None:
     acc = correct / total if total else 0.0
     mfs_acc = correct_mfs / total if total else 0.0
     coverage = covered / total if total else 0.0
+    metrics = calculate_metrics(y_true, y_pred)
     
     # Save results - same format as mfs_eval.json
     results = {
@@ -188,6 +210,9 @@ def main() -> None:
         "accuracy": round(acc, 4),
         "correct": correct,
         "total": total,
+        "precision_macro": metrics["precision_macro"],
+        "recall_macro": metrics["recall_macro"],
+        "f1_weighted": metrics["f1_weighted"],
         "accuracy_display": f"{acc:.2%} ({correct}/{total})"
     }
     
@@ -213,6 +238,9 @@ def main() -> None:
     print(f"{'BERT + SVM (this model)':<25} {acc:.2%} ({correct}/{total})")
     print("-"*45)
     print(f"Improvement: {(acc - mfs_acc):+.2%}")
+    print(f"\nPrecision (macro): {metrics['precision_macro']:.4f}")
+    print(f"Recall (macro): {metrics['recall_macro']:.4f}")
+    print(f"F1 (weighted): {metrics['f1_weighted']:.4f}")
     print(f"\n[OK] Saved: {EVAL_OUT}")
     print(f"[OK] Saved: {PREDICTIONS_OUT}")
 

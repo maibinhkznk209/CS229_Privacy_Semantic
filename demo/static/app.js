@@ -56,13 +56,17 @@ async function loadWSDResults() {
                 <td><strong>MFS Baseline</strong></td>
                 <td><span style="color: var(--success)">${(mfs.accuracy * 100).toFixed(2)}%</span></td>
                 <td>${mfs.correct}/${mfs.total}</td>
-                <td>WordNet First Synset (Zero-shot)</td>
+                <td>${mfs.f1_weighted ? (mfs.f1_weighted * 100).toFixed(2) + '%' : '-'}</td>
+                <td>${mfs.precision_macro ? (mfs.precision_macro * 100).toFixed(2) + '%' : '-'}</td>
+                <td>${mfs.recall_macro ? (mfs.recall_macro * 100).toFixed(2) + '%' : '-'}</td>
             </tr>
             <tr>
                 <td><strong>BERT + SVM</strong></td>
                 <td><span style="color: var(--secondary)">${bert.accuracy ? (bert.accuracy * 100).toFixed(2) + '%' : 'Chưa chạy'}</span></td>
                 <td>${bert.correct || '-'}/${bert.total || '-'}</td>
-                <td>SemCor Training + SVM Classifier</td>
+                <td>${bert.f1_weighted ? (bert.f1_weighted * 100).toFixed(2) + '%' : '-'}</td>
+                <td>${bert.precision_macro ? (bert.precision_macro * 100).toFixed(2) + '%' : '-'}</td>
+                <td>${bert.recall_macro ? (bert.recall_macro * 100).toFixed(2) + '%' : '-'}</td>
             </tr>
         `;
     }

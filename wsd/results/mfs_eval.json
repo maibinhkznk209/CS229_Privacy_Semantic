@@ -4,5 +4,8 @@
   "accuracy": 0.7683,
   "correct": 63,
   "total": 82,
+  "precision_macro": 0.651,
+  "recall_macro": 0.6562,
+  "f1_weighted": 0.7833,
   "accuracy_display": "76.83% (63/82)"
 }

@@ -333,7 +333,5 @@ async def get_summary():
 
 if __name__ == "__main__":
     import uvicorn
-    # Note: For development with auto-reload, use:
-    # python -m uvicorn demo.main:app --reload --port 8000
     uvicorn.run(app, host="0.0.0.0", port=8000)
 
