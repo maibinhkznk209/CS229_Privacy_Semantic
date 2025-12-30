@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS229 - Gán Nhãn Nghĩa Của Từ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+    <div class="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">🎓</span>
+                    <div class="logo-text">
+                        <h1>CS229 - Ngữ Nghĩa Học Tính Toán</h1>
+                        <p>Đồ Án 2: Gán Nhãn Nghĩa Của Từ</p>
+                    </div>
+                </div>
+                <nav class="nav">
+                    <button class="nav-btn active" data-section="overview">Tổng Quan</button>
+                    <button class="nav-btn" data-section="wsd">WSD</button>
+                    <button class="nav-btn" data-section="kb">Tri Thức</button>
+                    <button class="nav-btn" data-section="query">Truy Vấn</button>
+                    <button class="nav-btn" data-section="augment">WordNet</button>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <!-- Overview Section -->
+            <section id="overview" class="section active">
+                <div class="section-header">
+                    <h2>📊 Tổng Quan Đồ Án</h2>
+                </div>
+
+                <div class="stats-grid" id="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">📝</div>
+                        <div class="stat-value" id="stat-paragraph">-</div>
+                        <div class="stat-label">Ký tự văn bản</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🏷️</div>
+                        <div class="stat-value" id="stat-annotations">82</div>
+                        <div class="stat-label">Từ được gán nhãn</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🎯</div>
+                        <div class="stat-value" id="stat-accuracy">-</div>
+                        <div class="stat-label">MFS Accuracy</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🧠</div>
+                        <div class="stat-value" id="stat-kb">-</div>
+                        <div class="stat-label">Tri thức gốc</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🔗</div>
+                        <div class="stat-value" id="stat-augment">-</div>
+                        <div class="stat-label">Tri thức bổ sung</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">❓</div>
+                        <div class="stat-value">8</div>
+                        <div class="stat-label">Câu truy vấn</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>📄 Đoạn Văn (Privacy Policy)</h3>
+                    <div class="paragraph-box" id="paragraph-box">
+                        Đang tải...
+                    </div>
+                </div>
+            </section>
+
+            <!-- WSD Section -->
+            <section id="wsd" class="section">
+                <div class="section-header">
+                    <h2>🏷️ Word Sense Disambiguation</h2>
+                </div>
+
+                <div class="card">
+                    <h3>🔍 Tra cứu nghĩa từ</h3>
+                    <div class="wsd-input">
+                        <input type="text" id="wsd-word" placeholder="Nhập từ (vd: information)">
+                        <select id="wsd-pos">
+                            <option value="n">Danh từ (n)</option>
+                            <option value="v">Động từ (v)</option>
+                            <option value="a">Tính từ (a)</option>
+                            <option value="r">Trạng từ (r)</option>
+                        </select>
+                        <button class="btn btn-primary" onclick="lookupWord()">Tra cứu</button>
+                    </div>
+                    <div id="wsd-result" class="wsd-result"></div>
+                </div>
+
+                <div class="card">
+                    <h3>📊 So sánh MFS vs BERT+SVM</h3>
+                    <div class="comparison-table" id="wsd-comparison">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Model</th>
+                                    <th>Accuracy</th>
+                                    <th>Đúng/Tổng</th>
+                                    <th>Phương pháp</th>
+                                </tr>
+                            </thead>
+                            <tbody id="wsd-table-body">
+                                <tr>
+                                    <td colspan="4">Đang tải...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>📋 Danh sách từ đã gán nhãn</h3>
+                    <div class="annotations-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Lemma</th>
+                                    <th>POS</th>
+                                    <th>Synset</th>
+                                    <th>FOL Predicate</th>
+                                </tr>
+                            </thead>
+                            <tbody id="annotations-body">
+                                <tr>
+                                    <td colspan="4">Đang tải...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Knowledge Base Section -->
+            <section id="kb" class="section">
+                <div class="section-header">
+                    <h2>🧠 Biểu Diễn Tri Thức</h2>
+                </div>
+
+                <div class="card">
+                    <h3>📜 Knowledge Base (Prolog)</h3>
+                    <pre class="code-block" id="kb-facts">Đang tải...</pre>
+                </div>
+
+                <div class="card">
+                    <h3>📐 First-Order Logic (FOL)</h3>
+                    <div class="fol-content" id="fol-content">Đang tải...</div>
+                </div>
+            </section>
+
+            <!-- Query Section -->
+            <section id="query" class="section">
+                <div class="section-header">
+                    <h2>❓ Truy Vấn Tri Thức</h2>
+                </div>
+
+                <div class="card">
+                    <h3>🔎 Thực thi truy vấn</h3>
+                    <div class="query-input">
+                        <input type="text" id="query-text"
+                            placeholder="Nhập truy vấn (vd: collects, technology, uses_for)">
+                        <button class="btn btn-primary" onclick="executeQuery()">Truy vấn</button>
+                    </div>
+                    <div id="query-result" class="query-result"></div>
+                </div>
+
+                <div class="card">
+                    <h3>📋 Danh sách câu hỏi mẫu</h3>
+                    <div class="queries-list" id="queries-list">
+                        Đang tải...
+                    </div>
+                </div>
+            </section>
+
+            <!-- Augmentation Section -->
+            <section id="augment" class="section">
+                <div class="section-header">
+                    <h2>🔗 WordNet Augmentation</h2>
+                </div>
+
+                <div class="augment-stats">
+                    <div class="stat-card small">
+                        <div class="stat-value" id="aug-synonyms">-</div>
+                        <div class="stat-label">Từ đồng nghĩa</div>
+                    </div>
+                    <div class="stat-card small">
+                        <div class="stat-value" id="aug-isa">-</div>
+                        <div class="stat-label">Quan hệ is_a</div>
+                    </div>
+                </div>
+
+                <div class="augment-grid">
+                    <div class="card">
+                        <h3>📝 Synonyms</h3>
+                        <pre class="code-block small" id="synonyms-list">Đang tải...</pre>
+                    </div>
+                    <div class="card">
+                        <h3>🔼 Hypernyms (is_a)</h3>
+                        <pre class="code-block small" id="isa-list">Đang tải...</pre>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>CS229 - Ngữ Nghĩa Học Tính Toán | ĐH Công Nghệ Thông Tin, ĐHQG-HCM</p>
+        </footer>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+
+</html>

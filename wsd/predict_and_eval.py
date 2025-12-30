@@ -26,7 +26,7 @@ SCRIPT_DIR = Path(__file__).parent
 REF_PATH = SCRIPT_DIR / "data" / "reference_annotations.csv"
 PARAGRAPH_PATH = SCRIPT_DIR.parent / "data" / "paragraph.txt"
 MODEL_PATH = SCRIPT_DIR / "models" / "bert_semcor_model.pkl"
-EVAL_OUT = SCRIPT_DIR / "results" / "bert_semcor_eval.json"
+EVAL_OUT = SCRIPT_DIR / "results" / "bert_eval.json"
 PREDICTIONS_OUT = SCRIPT_DIR / "results" / "predictions_bert_semcor.json"
 
 
@@ -181,21 +181,14 @@ def main() -> None:
     mfs_acc = correct_mfs / total if total else 0.0
     coverage = covered / total if total else 0.0
     
-    # Save results
+    # Save results - same format as mfs_eval.json
     results = {
         "method": "BERT + SVM (trained on SemCor)",
-        "model_name": tokenizer_name,
-        "dataset_train": "semcor_instances.jsonl",
-        "dataset_eval": "reference_annotations.csv",
-        "n_models_available": len(models),
+        "dataset": "reference_annotations.csv",
         "accuracy": round(acc, 4),
-        "mfs_accuracy": round(mfs_acc, 4),
-        "coverage": round(coverage, 4),
         "correct": correct,
         "total": total,
-        "covered": covered,
-        "accuracy_display": f"{acc:.2%} ({correct}/{total})",
-        "improvement_over_mfs": f"{(acc - mfs_acc):+.2%}"
+        "accuracy_display": f"{acc:.2%} ({correct}/{total})"
     }
     
     EVAL_OUT.parent.mkdir(parents=True, exist_ok=True)
