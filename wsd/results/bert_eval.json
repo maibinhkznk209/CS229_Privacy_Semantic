@@ -1,0 +1,8 @@
+{
+  "method": "BERT + SVM (trained on SemCor)",
+  "dataset": "reference_annotations.csv",
+  "accuracy": 0.6707,
+  "correct": 55,
+  "total": 82,
+  "accuracy_display": "67.07% (55/82)"
+}

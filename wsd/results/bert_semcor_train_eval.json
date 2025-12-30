@@ -1,0 +1,6 @@
+{
+  "n_models": 2419,
+  "avg_train_accuracy": 0.9989,
+  "avg_test_accuracy": 0.6828,
+  "model_name": "bert-base-uncased"
+}
