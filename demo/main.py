@@ -218,7 +218,7 @@ async def get_queries():
                     "id": parts[1].strip(),
                     "question": parts[2].strip(),
                     "prolog": parts[3].strip(),
-                    "answer_shape": parts[4].strip()
+                    "result": parts[4].strip() if len(parts) > 4 else ""
                 })
     
     return {

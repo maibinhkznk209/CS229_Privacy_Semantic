@@ -466,15 +466,36 @@ tr:hover td {
     margin-right: 0.5rem;
 }
 
+.query-header {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
 .query-text {
     color: var(--text-primary);
-    margin-bottom: 0.5rem;
+    flex: 1;
 }
 
 .query-prolog {
     font-family: monospace;
     font-size: 0.875rem;
     color: var(--secondary);
+    margin-bottom: 0.5rem;
+}
+
+.query-result-box {
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid var(--success);
+    border-radius: var(--radius-sm);
+    padding: 0.5rem 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.query-result-box code {
+    color: var(--success);
+    font-family: monospace;
+    font-size: 0.875rem;
 }
 
 /* ==================== AUGMENT GRID ==================== */

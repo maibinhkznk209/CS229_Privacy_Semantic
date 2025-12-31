@@ -100,10 +100,15 @@ async function loadQueries() {
     if (data && data.queries) {
         const list = document.getElementById('queries-list');
         list.innerHTML = data.queries.map(q => `
-            <div class="query-card" onclick="runPresetQuery('${q.prolog}')">
-                <span class="query-id">${q.id}</span>
-                <div class="query-text">${q.question}</div>
+            <div class="query-card">
+                <div class="query-header">
+                    <span class="query-id">${q.id}</span>
+                    <span class="query-text">${q.question}</span>
+                </div>
                 <div class="query-prolog">${q.prolog}</div>
+                <div class="query-result-box">
+                    <strong>Kết quả:</strong> <code>${q.result}</code>
+                </div>
             </div>
         `).join('');
     }
